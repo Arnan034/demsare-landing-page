@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sempurnakan Gaya Anda | Premium Bag & Custom</title>
+    
+    <!-- Google Fonts: Playfair Display (Serif/Premium feel) & Inter (Clean Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons for minimalist thin-line icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            DEFAULT: '#1D8A99', // Primary Teal
+                            light: '#5BB5C2',
+                            dark: '#14636E',
+                            darker: '#0B383E'
+                        },
+                        beige: {
+                            DEFAULT: '#F7F5F0', // Soft beige
+                            dark: '#E8E4D9'
+                        },
+                        ink: {
+                            DEFAULT: '#2D2D2D', // Subtle black
+                            light: '#4A4A4A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-ink bg-white antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="ph ph-handbag text-3xl text-teal-dark"></i>
+                    <span class="font-serif text-2xl font-bold text-ink tracking-wide">LÉAUK</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#koleksi" class="text-ink hover:text-teal-dark transition duration-300">Koleksi Ready</a>
+                    <a href="#custom" class="text-ink hover:text-teal-dark transition duration-300">Jasa Custom</a>
+                    <a href="#portofolio" class="text-ink hover:text-teal-dark transition duration-300">Portofolio</a>
+                    <a href="#faq" class="text-ink hover:text-teal-dark transition duration-300">FAQ</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#kontak" class="bg-teal text-white px-5 py-2.5 rounded-full hover:bg-teal-dark transition duration-300 font-medium">Hubungi Kami</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-ink hover:text-teal-dark focus:outline-none transition">
+                        <i id="mobile-menu-icon" class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown with Fade & Slide Transition -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg transition-all duration-300 ease-in-out opacity-0 pointer-events-none -translate-y-2">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#koleksi" class="mobile-link block px-3 py-3 text-base font-medium text-ink hover:text-teal hover:bg-beige rounded-md transition">Koleksi Ready</a>
+                <a href="#custom" class="mobile-link block px-3 py-3 text-base font-medium text-ink hover:text-teal hover:bg-beige rounded-md transition">Jasa Custom</a>
+                <a href="#portofolio" class="mobile-link block px-3 py-3 text-base font-medium text-ink hover:text-teal hover:bg-beige rounded-md transition">Portofolio</a>
+                <a href="#faq" class="mobile-link block px-3 py-3 text-base font-medium text-ink hover:text-teal hover:bg-beige rounded-md transition">FAQ</a>
+                <a href="#kontak" class="mobile-link block px-3 py-3 mt-4 text-base font-medium text-white bg-teal hover:bg-teal-dark rounded-md text-center transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-28 pb-16 md:pt-32 md:pb-24 lg:min-h-screen flex items-center bg-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-ink">
+                        Sempurnakan Gaya Anda.<br/>
+                        <span class="text-teal-dark italic">Wujudkan Tas Impian Brand Anda.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-ink-light mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Dari koleksi <strong>tas pria wanita</strong> berdesain <em>timeless</em> untuk gaya harian, hingga <strong>jasa pembuatan tas</strong> custom premium untuk kebutuhan korporat dan bisnis. Kualitas pengerjaan tangan terbaik, langsung dari ahlinya.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#koleksi" class="bg-teal text-white px-8 py-4 rounded-full font-medium hover:bg-teal-dark transition duration-300 shadow-lg shadow-teal/30 flex items-center justify-center gap-2">
+                            Lihat Produk <i class="ph ph-arrow-right"></i>
+                        </a>
+                        <a href="#custom" class="bg-transparent border border-ink text-ink px-8 py-4 rounded-full font-medium hover:bg-ink hover:text-white transition duration-300 flex items-center justify-center">
+                            Custom Tas Sekarang
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&q=80&w=600" alt="Wanita dengan tas premium" class="rounded-2xl rounded-tr-[4rem] w-full h-64 md:h-96 object-cover shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?auto=format&fit=crop&q=80&w=600" alt="Material tas dan pengrajin" class="rounded-2xl rounded-bl-[4rem] w-full h-64 md:h-96 object-cover shadow-xl mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. TRUST / VALUE SECTION -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300">
+                    <div class="w-12 h-12 bg-teal/20 text-teal-dark rounded-full flex items-center justify-center mb-4">
+                        <i class="ph ph-medal text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl mb-2">Kualitas Premium</h3>
+                    <p class="text-ink-light text-sm leading-relaxed">Detail jahitan presisi tinggi dengan kurasi material pilihan untuk daya tahan maksimal.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300">
+                    <div class="w-12 h-12 bg-teal/20 text-teal-dark rounded-full flex items-center justify-center mb-4">
+                        <i class="ph ph-factory text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl mb-2">Produsen Tangan Pertama</h3>
+                    <p class="text-ink-light text-sm leading-relaxed">Kami adalah <strong>produsen tas</strong> langsung. Memberikan Anda harga kompetitif tanpa mengorbankan kualitas.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300">
+                    <div class="w-12 h-12 bg-teal/20 text-teal-dark rounded-full flex items-center justify-center mb-4">
+                        <i class="ph ph-bezier-curve text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl mb-2">Fleksibilitas Custom</h3>
+                    <p class="text-ink-light text-sm leading-relaxed">Desain, ukuran, hingga material dapat disesuaikan sepenuhnya dengan visi identitas brand Anda.</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300">
+                    <div class="w-12 h-12 bg-teal/20 text-teal-dark rounded-full flex items-center justify-center mb-4">
+                        <i class="ph ph-clock-countdown text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl mb-2">Pengerjaan Tepat Waktu</h3>
+                    <p class="text-ink-light text-sm leading-relaxed">Kapasitas produksi handal dengan manajemen waktu ketat memastikan pesanan tiba sesuai jadwal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PRODUCT SECTION (READY-MADE) -->
+    <section id="koleksi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <span class="text-teal font-semibold tracking-wider uppercase text-sm">Retail Collection</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2 mb-4">Koleksi Ready-to-Wear</h2>
+                <p class="text-ink-light">Temukan rangkaian tas pria wanita dengan desain timeless dan fungsional. Dirancang untuk menemani rutinitas harian Anda dengan sentuhan elegan.</p>
+            </div>
+
+            <!-- Grid diubah menjadi 4 kolom di desktop (lg:grid-cols-4) dan 2 kolom di tablet -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Product 1 -->
+                <div class="group cursor-pointer">
+                    <!-- Aspect ratio diubah menjadi 1:1 (aspect-square) -->
+                    <div class="relative overflow-hidden rounded-2xl mb-4 bg-beige aspect-square">
+                        <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&q=80&w=600" alt="The Signature Teal Tote" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif font-bold text-lg mb-1 group-hover:text-teal-dark transition">The Signature Teal Tote</h3>
+                    <p class="text-ink-light text-sm">Kanvas premium dengan aksen kulit sintetis. Ruang luas, gaya tanpa batas.</p>
+                </div>
+                <!-- Product 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 bg-beige aspect-square">
+                        <img src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&q=80&w=600" alt="Urban Minimalist Sling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif font-bold text-lg mb-1 group-hover:text-teal-dark transition">Urban Minimalist Sling</h3>
+                    <p class="text-ink-light text-sm">Kulit vegan halus dengan kompartemen pintar. Cocok untuk profesional muda.</p>
+                </div>
+                <!-- Product 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 bg-beige aspect-square">
+                        <img src="https://images.unsplash.com/photo-1628149462111-912f29d2f2f7?auto=format&fit=crop&q=80&w=600" alt="Classic Daily Backpack" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif font-bold text-lg mb-1 group-hover:text-teal-dark transition">Classic Daily Backpack</h3>
+                    <p class="text-ink-light text-sm">Bahan water-repellent elegan. Tampilan formal namun tetap santai.</p>
+                </div>
+                <!-- Product 4 (Baru ditambahkan) -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 bg-beige aspect-square">
+                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=600" alt="Premium Leather Satchel" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif font-bold text-lg mb-1 group-hover:text-teal-dark transition">Premium Leather Satchel</h3>
+                    <p class="text-ink-light text-sm">Klasik dan terstruktur. Pilihan sempurna untuk kesan profesional yang kuat.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="flex items-center justify-center gap-2 px-8 py-3 rounded-full border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 font-medium">
+                    <i class="ph ph-shopping-bag"></i> Beli di Shopee
+                </button>
+                <button class="flex items-center justify-center gap-2 px-8 py-3 rounded-full border border-ink text-ink hover:bg-ink hover:text-white transition duration-300 font-medium">
+                    <i class="ph ph-tiktok-logo"></i> Lihat di TikTok Shop
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CUSTOM SERVICE SECTION -->
+    <section id="custom" class="py-20 bg-teal-darker text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1556015048-4bba3883b27b?auto=format&fit=crop&q=80&w=800" alt="Proses desain tas custom" class="rounded-2xl shadow-2xl object-cover h-[500px] w-full">
+                    <div class="absolute -bottom-8 -right-8 bg-teal p-6 rounded-2xl hidden md:block">
+                        <i class="ph ph-quotes text-4xl text-white/50 mb-2"></i>
+                        <p class="font-serif text-xl italic max-w-xs">"Menerjemahkan identitas brand Anda ke dalam setiap jahitan."</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <span class="text-teal-light font-semibold tracking-wider uppercase text-sm">B2B & Corporate Services</span>
+                    <h2 class="font-serif text-3xl md:text-5xl font-bold mt-2 mb-6 leading-tight">Jasa Pembuatan Tas Custom, Dirancang Khusus Untuk Visi Anda</h2>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        Membutuhkan <em>merchandise</em> perusahaan eksklusif, <em>seminar kit</em>, atau ingin merintis brand tas Anda sendiri? Sebagai spesialis <strong>tas custom</strong>, kami siap mengubah ide Anda menjadi produk nyata yang membanggakan.
+                    </p>
+                    
+                    <div class="space-y-6 mb-10">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-teal flex items-center justify-center flex-shrink-0 font-serif font-bold">1</div>
+                            <div>
+                                <h4 class="font-bold text-lg">Konsultasi Ide</h4>
+                                <p class="text-gray-400 text-sm">Ceritakan kebutuhan, referensi desain, dan anggaran Anda kepada tim kami.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-teal flex items-center justify-center flex-shrink-0 font-serif font-bold">2</div>
+                            <div>
+                                <h4 class="font-bold text-lg">Desain & Sampling</h4>
+                                <p class="text-gray-400 text-sm">Kami membuatkan sketsa visual dan sampel fisik (prototipe) untuk Anda setujui.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-teal flex items-center justify-center flex-shrink-0 font-serif font-bold">3</div>
+                            <div>
+                                <h4 class="font-bold text-lg">Produksi & Pengiriman</h4>
+                                <p class="text-gray-400 text-sm">Pengerjaan masal dengan kontrol kualitas ketat, dikirim aman hingga ke lokasi Anda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#kontak" class="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-medium hover:bg-beige transition duration-300 shadow-xl">
+                        <i class="ph-fill ph-whatsapp-logo text-xl text-green-600"></i> Konsultasi via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CUSTOM PORTFOLIO -->
+    <section id="portofolio" class="py-20 bg-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-ink">Karya Kami</h2>
+                <p class="text-ink-light max-w-2xl mx-auto">Bukti nyata dari dedikasi kami. Jelajahi berbagai proyek custom yang telah kami wujudkan untuk klien korporat dan brand lokal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600" alt="Seminar Kit Corporate" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Corporate Client</span>
+                        <h3 class="font-serif font-bold text-xl mb-2">Seminar Kit Exclusive</h3>
+                        <p class="text-ink-light text-sm">Ransel laptop minimalis berbahan kanvas anti-air dengan bordir logo presisi untuk Bank Nasional.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600" alt="Merchandise Event" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Event Merchandise</span>
+                        <h3 class="font-serif font-bold text-xl mb-2">Beauty Community Pouch</h3>
+                        <p class="text-ink-light text-sm"><em>Pouch</em> serbaguna berdesain <em>chic</em> untuk hadiah eksklusif perayaan ulang tahun komunitas kecantikan.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?auto=format&fit=crop&q=80&w=600" alt="Local Brand Production" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Local Brand Production</span>
+                        <h3 class="font-serif font-bold text-xl mb-2">Urban Street Sling Bag</h3>
+                        <p class="text-ink-light text-sm"><em>Sling bag</em> pria desain urban, diproduksi khusus untuk <em>clothing line</em> lokal independen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TESTIMONIAL SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-12 text-center text-ink">Apa Kata Mereka</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testi 1 -->
+                <div class="bg-beige p-8 rounded-[2rem] rounded-tr-none relative">
+                    <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6"></i>
+                    <div class="flex gap-1 text-yellow-500 mb-4 text-sm">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-ink font-medium leading-relaxed mb-6">"Kualitas tas custom untuk event kantor kami sangat memuaskan. Jahitannya rapi, materialnya tebal, dan yang terpenting: selesai lebih cepat dari target waktu!"</p>
+                    <div>
+                        <p class="font-bold text-ink">Budianto H.</p>
+                        <p class="text-sm text-teal-dark">HR Manager (Custom Order)</p>
+                    </div>
+                </div>
+                <!-- Testi 2 -->
+                <div class="bg-beige p-8 rounded-[2rem] rounded-tl-none relative">
+                    <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6"></i>
+                    <div class="flex gap-1 text-yellow-500 mb-4 text-sm">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-ink font-medium leading-relaxed mb-6">"Beli tas kerja dari koleksi ready-stock mereka. Desainnya beneran elegan dan praktis buat bawa laptop. Pelayanan admin juga ramah banget."</p>
+                    <div>
+                        <p class="font-bold text-ink">Sarah L.</p>
+                        <p class="text-sm text-teal-dark">Karyawan Swasta (Retail)</p>
+                    </div>
+                </div>
+                <!-- Testi 3 -->
+                <div class="bg-beige p-8 rounded-[2rem] rounded-tr-none relative">
+                    <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6"></i>
+                    <div class="flex gap-1 text-yellow-500 mb-4 text-sm">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-ink font-medium leading-relaxed mb-6">"Susah cari vendor yang ngerti detail desain. Untung ketemu tim ini. Komunikasi lancar dan hasil sampling persis seperti yang saya bayangkan."</p>
+                    <div>
+                        <p class="font-bold text-ink">Andi W.</p>
+                        <p class="text-sm text-teal-dark">Founder Local Brand (Custom Order)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. MARKETPLACE SECTION -->
+    <section class="py-16 bg-beige/50 border-y border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-ink">Beli Lebih Mudah. Nikmati Promo Gratis Ongkir.</h2>
+            <p class="text-ink-light mb-8">Temukan koleksi lengkap kami dan nikmati berbagai penawaran menarik langsung dari toko resmi kami di marketplace favorit Anda.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#" class="w-full sm:w-auto bg-white border border-gray-200 px-8 py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-md transition group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee Logo" class="h-6 grayscale group-hover:grayscale-0 transition">
+                    <span class="font-medium text-ink">Belanja di Shopee</span>
+                </a>
+                <a href="#" class="w-full sm:w-auto bg-white border border-gray-200 px-8 py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-md transition group">
+                    <i class="ph-fill ph-tiktok-logo text-2xl text-gray-500 group-hover:text-black transition"></i>
+                    <span class="font-medium text-ink">Kunjungi TikTok Shop</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FAQ SECTION -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-ink">Pertanyaan yang Sering Diajukan</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="group bg-beige rounded-2xl faq-item">
+                    <button class="w-full flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-ink text-left focus:outline-none faq-button">
+                        <h3 class="font-bold text-lg">Berapa minimum order (MOQ) untuk pembuatan tas custom?</h3>
+                        <span class="relative size-5 shrink-0">
+                            <i class="ph ph-plus absolute inset-0 text-xl transition-all duration-300 group-[.is-open]:rotate-180 group-[.is-open]:opacity-0"></i>
+                            <i class="ph ph-minus absolute inset-0 text-xl transition-all duration-300 -rotate-180 opacity-0 group-[.is-open]:rotate-0 group-[.is-open]:opacity-100"></i>
+                        </span>
+                    </button>
+                    <div class="grid grid-rows-[0fr] transition-all duration-300 ease-in-out opacity-0 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-0 text-ink-light leading-relaxed">
+                                Standar minimum order kami adalah 50 pcs. Namun, ini dapat dinegosiasikan tergantung pada tingkat kerumitan desain dan material yang digunakan.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="group bg-beige rounded-2xl faq-item">
+                    <button class="w-full flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-ink text-left focus:outline-none faq-button">
+                        <h3 class="font-bold text-lg">Berapa lama estimasi waktu produksinya?</h3>
+                        <span class="relative size-5 shrink-0">
+                            <i class="ph ph-plus absolute inset-0 text-xl transition-all duration-300 group-[.is-open]:rotate-180 group-[.is-open]:opacity-0"></i>
+                            <i class="ph ph-minus absolute inset-0 text-xl transition-all duration-300 -rotate-180 opacity-0 group-[.is-open]:rotate-0 group-[.is-open]:opacity-100"></i>
+                        </span>
+                    </button>
+                    <div class="grid grid-rows-[0fr] transition-all duration-300 ease-in-out opacity-0 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-0 text-ink-light leading-relaxed">
+                                Waktu produksi rata-rata memakan waktu 2 hingga 4 minggu setelah sampel fisik disetujui (ACC). Waktu bisa lebih cepat tergantung antrean produksi yang sedang berjalan.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="group bg-beige rounded-2xl faq-item">
+                    <button class="w-full flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-ink text-left focus:outline-none faq-button">
+                        <h3 class="font-bold text-lg">Apakah saya bisa membawa desain sendiri?</h3>
+                        <span class="relative size-5 shrink-0">
+                            <i class="ph ph-plus absolute inset-0 text-xl transition-all duration-300 group-[.is-open]:rotate-180 group-[.is-open]:opacity-0"></i>
+                            <i class="ph ph-minus absolute inset-0 text-xl transition-all duration-300 -rotate-180 opacity-0 group-[.is-open]:rotate-0 group-[.is-open]:opacity-100"></i>
+                        </span>
+                    </button>
+                    <div class="grid grid-rows-[0fr] transition-all duration-300 ease-in-out opacity-0 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-0 text-ink-light leading-relaxed">
+                                Tentu saja. Anda bisa mengirimkan sketsa, foto referensi, atau spesifikasi lengkap. Tim ahli kami akan membantu menerjemahkannya menjadi pola siap produksi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="group bg-beige rounded-2xl faq-item">
+                    <button class="w-full flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-ink text-left focus:outline-none faq-button">
+                        <h3 class="font-bold text-lg">Material apa saja yang bisa digunakan?</h3>
+                        <span class="relative size-5 shrink-0">
+                            <i class="ph ph-plus absolute inset-0 text-xl transition-all duration-300 group-[.is-open]:rotate-180 group-[.is-open]:opacity-0"></i>
+                            <i class="ph ph-minus absolute inset-0 text-xl transition-all duration-300 -rotate-180 opacity-0 group-[.is-open]:rotate-0 group-[.is-open]:opacity-100"></i>
+                        </span>
+                    </button>
+                    <div class="grid grid-rows-[0fr] transition-all duration-300 ease-in-out opacity-0 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-0 text-ink-light leading-relaxed">
+                                Kami menyediakan beragam pilihan material premium, mulai dari Kanvas, Cordura, Dinir, Kulit Sintetis (PU Leather), hingga bahan anti-air (water-repellent) khusus.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FINAL CTA SECTION -->
+    <section id="kontak" class="py-24 bg-teal text-white relative overflow-hidden">
+        <!-- Decorative abstract circle -->
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-teal-light rounded-full mix-blend-multiply filter blur-2xl opacity-50"></div>
+        <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-teal-dark rounded-full mix-blend-multiply filter blur-2xl opacity-50"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Siap Melangkah dengan Gaya Baru atau Memulai Proyek Anda?</h2>
+            <p class="text-white/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Jangan tunda lagi. Pilih koleksi tas favorit yang mewakili karakter Anda, atau diskusikan ide tas custom Anda bersama ahlinya hari ini.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-white text-teal-dark px-8 py-4 rounded-full font-bold hover:bg-beige hover:shadow-lg transition duration-300 flex items-center justify-center gap-2">
+                    <i class="ph-fill ph-whatsapp-logo text-green-600 text-xl"></i> Konsultasi via WhatsApp (Gratis)
+                </a>
+                <a href="#koleksi" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-teal transition duration-300 flex items-center justify-center gap-2">
+                    <i class="ph ph-shopping-bag"></i> Lihat Koleksi Marketplace
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Minimalis -->
+    <footer class="bg-ink text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i class="ph-fill ph-handbag text-teal text-xl"></i>
+                <span class="font-serif text-white font-bold tracking-widest">LÉAUK</span>
+            </div>
+            <p>&copy; 2026 Léauk Premium Bags. Hak Cipta Dilindungi.</p>
+            <div class="flex gap-4 text-xl">
+                <a href="#" class="hover:text-teal transition"><i class="ph-fill ph-instagram-logo"></i></a>
+                <a href="#" class="hover:text-teal transition"><i class="ph-fill ph-tiktok-logo"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ Interactive Slide
+            const faqButtons = document.querySelectorAll('.faq-button');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const currentItem = button.closest('.faq-item');
+                    const isOpen = currentItem.classList.contains('is-open');
+
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('is-open');
+                    });
+
+                    // If it wasn't open previously, open the clicked one
+                    if (!isOpen) {
+                        currentItem.classList.add('is-open');
+                    }
+                });
+            });
+
+            // Mobile Menu Toggle Logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMobileMenu() {
+                const isOpen = mobileMenu.classList.contains('opacity-100');
+                
+                if (isOpen) {
+                    // Close menu (Fade out & slide up)
+                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+                    mobileMenuIcon.classList.replace('ph-x', 'ph-list');
+                } else {
+                    // Open menu (Fade in & slide down)
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+                    mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    mobileMenuIcon.classList.replace('ph-list', 'ph-x');
+                }
+            }
+
+            // Open/Close menu when button is clicked
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+            // Auto-close menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('opacity-100')) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
