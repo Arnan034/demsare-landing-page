@@ -43,6 +43,22 @@
             }
         }
     </script>
+    <style>
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+    </style>
 </head>
 <body class="font-sans text-ink bg-white antialiased">
 
@@ -92,14 +108,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1 text-center lg:text-left">
-                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-ink">
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-ink reveal">
                         Sempurnakan Gaya Anda.<br/>
                         <span class="text-teal-dark italic">Wujudkan Tas Impian Brand Anda.</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-ink-light mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    <p class="text-lg md:text-xl text-ink-light mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed reveal delay-100">
                         Dari koleksi <strong>tas pria wanita</strong> berdesain <em>timeless</em> untuk gaya harian, hingga <strong>jasa pembuatan tas</strong> custom premium untuk kebutuhan korporat dan bisnis. Kualitas pengerjaan tangan terbaik, langsung dari ahlinya.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start reveal delay-200">
                         <a href="#koleksi" class="bg-teal text-white px-8 py-4 rounded-full font-medium hover:bg-teal-dark transition duration-300 shadow-lg shadow-teal/30 flex items-center justify-center gap-2">
                             Lihat Produk <i class="ph ph-arrow-right"></i>
                         </a>
@@ -108,7 +124,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="order-1 lg:order-2 grid grid-cols-2 gap-4">
+                <div class="order-1 lg:order-2 grid grid-cols-2 gap-4 reveal delay-300">
                     <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&q=80&w=600" alt="Wanita dengan tas premium" class="rounded-2xl rounded-tr-[4rem] w-full h-64 md:h-96 object-cover shadow-xl">
                     <img src="https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?auto=format&fit=crop&q=80&w=600" alt="Material tas dan pengrajin" class="rounded-2xl rounded-bl-[4rem] w-full h-64 md:h-96 object-cover shadow-xl mt-8">
                 </div>
@@ -121,7 +137,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Benefit 1 -->
-                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300">
+                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300 reveal">
                     <div class="w-12 h-12 bg-teal/20 text-teal-dark rounded-full flex items-center justify-center mb-4">
                         <i class="ph ph-medal text-2xl"></i>
                     </div>
@@ -129,7 +145,7 @@
                     <p class="text-ink-light text-sm leading-relaxed">Detail jahitan presisi tinggi dengan kurasi material pilihan untuk daya tahan maksimal.</p>
                 </div>
                 <!-- Benefit 2 -->
-                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300">
+                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300 reveal delay-100">
                     <div class="w-12 h-12 bg-teal/20 text-teal-dark rounded-full flex items-center justify-center mb-4">
                         <i class="ph ph-factory text-2xl"></i>
                     </div>
@@ -137,7 +153,7 @@
                     <p class="text-ink-light text-sm leading-relaxed">Kami adalah <strong>produsen tas</strong> langsung. Memberikan Anda harga kompetitif tanpa mengorbankan kualitas.</p>
                 </div>
                 <!-- Benefit 3 -->
-                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300">
+                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300 reveal delay-200">
                     <div class="w-12 h-12 bg-teal/20 text-teal-dark rounded-full flex items-center justify-center mb-4">
                         <i class="ph ph-bezier-curve text-2xl"></i>
                     </div>
@@ -145,7 +161,7 @@
                     <p class="text-ink-light text-sm leading-relaxed">Desain, ukuran, hingga material dapat disesuaikan sepenuhnya dengan visi identitas brand Anda.</p>
                 </div>
                 <!-- Benefit 4 -->
-                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300">
+                <div class="p-6 rounded-2xl border border-gray-100 bg-beige/30 hover:shadow-lg transition duration-300 reveal delay-300">
                     <div class="w-12 h-12 bg-teal/20 text-teal-dark rounded-full flex items-center justify-center mb-4">
                         <i class="ph ph-clock-countdown text-2xl"></i>
                     </div>
@@ -159,7 +175,7 @@
     <!-- 3. PRODUCT SECTION (READY-MADE) -->
     <section id="koleksi" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 max-w-2xl mx-auto">
+            <div class="text-center mb-16 max-w-2xl mx-auto reveal">
                 <span class="text-teal font-semibold tracking-wider uppercase text-sm">Retail Collection</span>
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2 mb-4">Koleksi Ready-to-Wear</h2>
                 <p class="text-ink-light">Temukan rangkaian tas pria wanita dengan desain timeless dan fungsional. Dirancang untuk menemani rutinitas harian Anda dengan sentuhan elegan.</p>
@@ -168,7 +184,7 @@
             <!-- Grid diubah menjadi 4 kolom di desktop (lg:grid-cols-4) dan 2 kolom di tablet -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 <!-- Product 1 -->
-                <div class="group cursor-pointer">
+                <div class="group cursor-pointer reveal">
                     <!-- Aspect ratio diubah menjadi 1:1 (aspect-square) -->
                     <div class="relative overflow-hidden rounded-2xl mb-4 bg-beige aspect-square">
                         <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&q=80&w=600" alt="The Signature Teal Tote" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -177,7 +193,7 @@
                     <p class="text-ink-light text-sm">Kanvas premium dengan aksen kulit sintetis. Ruang luas, gaya tanpa batas.</p>
                 </div>
                 <!-- Product 2 -->
-                <div class="group cursor-pointer">
+                <div class="group cursor-pointer reveal delay-100">
                     <div class="relative overflow-hidden rounded-2xl mb-4 bg-beige aspect-square">
                         <img src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&q=80&w=600" alt="Urban Minimalist Sling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
@@ -185,7 +201,7 @@
                     <p class="text-ink-light text-sm">Kulit vegan halus dengan kompartemen pintar. Cocok untuk profesional muda.</p>
                 </div>
                 <!-- Product 3 -->
-                <div class="group cursor-pointer">
+                <div class="group cursor-pointer reveal delay-200">
                     <div class="relative overflow-hidden rounded-2xl mb-4 bg-beige aspect-square">
                         <img src="https://images.unsplash.com/photo-1628149462111-912f29d2f2f7?auto=format&fit=crop&q=80&w=600" alt="Classic Daily Backpack" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
@@ -193,7 +209,7 @@
                     <p class="text-ink-light text-sm">Bahan water-repellent elegan. Tampilan formal namun tetap santai.</p>
                 </div>
                 <!-- Product 4 (Baru ditambahkan) -->
-                <div class="group cursor-pointer">
+                <div class="group cursor-pointer reveal delay-300">
                     <div class="relative overflow-hidden rounded-2xl mb-4 bg-beige aspect-square">
                         <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=600" alt="Premium Leather Satchel" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
@@ -202,7 +218,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal delay-400">
                 <button class="flex items-center justify-center gap-2 px-8 py-3 rounded-full border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 font-medium">
                     <i class="ph ph-shopping-bag"></i> Beli di Shopee
                 </button>
@@ -217,7 +233,7 @@
     <section id="custom" class="py-20 bg-teal-darker text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative">
+                <div class="relative reveal">
                     <img src="https://images.unsplash.com/photo-1556015048-4bba3883b27b?auto=format&fit=crop&q=80&w=800" alt="Proses desain tas custom" class="rounded-2xl shadow-2xl object-cover h-[500px] w-full">
                     <div class="absolute -bottom-8 -right-8 bg-teal p-6 rounded-2xl hidden md:block">
                         <i class="ph ph-quotes text-4xl text-white/50 mb-2"></i>
@@ -225,7 +241,7 @@
                     </div>
                 </div>
                 
-                <div>
+                <div class="reveal delay-200">
                     <span class="text-teal-light font-semibold tracking-wider uppercase text-sm">B2B & Corporate Services</span>
                     <h2 class="font-serif text-3xl md:text-5xl font-bold mt-2 mb-6 leading-tight">Jasa Pembuatan Tas Custom, Dirancang Khusus Untuk Visi Anda</h2>
                     <p class="text-gray-300 text-lg mb-8 leading-relaxed">
@@ -267,14 +283,14 @@
     <!-- 5. CUSTOM PORTFOLIO -->
     <section id="portofolio" class="py-20 bg-beige">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-ink">Karya Kami</h2>
                 <p class="text-ink-light max-w-2xl mx-auto">Bukti nyata dari dedikasi kami. Jelajahi berbagai proyek custom yang telah kami wujudkan untuk klien korporat dan brand lokal.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Item 1 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 reveal">
                     <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600" alt="Seminar Kit Corporate" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Corporate Client</span>
@@ -283,7 +299,7 @@
                     </div>
                 </div>
                 <!-- Item 2 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 reveal delay-100">
                     <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600" alt="Merchandise Event" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Event Merchandise</span>
@@ -292,7 +308,7 @@
                     </div>
                 </div>
                 <!-- Item 3 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 reveal delay-200">
                     <img src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?auto=format&fit=crop&q=80&w=600" alt="Local Brand Production" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Local Brand Production</span>
@@ -307,11 +323,11 @@
     <!-- 6. TESTIMONIAL SECTION -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-12 text-center text-ink">Apa Kata Mereka</h2>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-12 text-center text-ink reveal">Apa Kata Mereka</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Testi 1 -->
-                <div class="bg-beige p-8 rounded-[2rem] rounded-tr-none relative">
+                <div class="bg-beige p-8 rounded-[2rem] rounded-tr-none relative reveal">
                     <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6"></i>
                     <div class="flex gap-1 text-yellow-500 mb-4 text-sm">
                         <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -323,7 +339,7 @@
                     </div>
                 </div>
                 <!-- Testi 2 -->
-                <div class="bg-beige p-8 rounded-[2rem] rounded-tl-none relative">
+                <div class="bg-beige p-8 rounded-[2rem] rounded-tl-none relative reveal delay-100">
                     <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6"></i>
                     <div class="flex gap-1 text-yellow-500 mb-4 text-sm">
                         <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -335,7 +351,7 @@
                     </div>
                 </div>
                 <!-- Testi 3 -->
-                <div class="bg-beige p-8 rounded-[2rem] rounded-tr-none relative">
+                <div class="bg-beige p-8 rounded-[2rem] rounded-tr-none relative reveal delay-200">
                     <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6"></i>
                     <div class="flex gap-1 text-yellow-500 mb-4 text-sm">
                         <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -353,9 +369,9 @@
     <!-- 7. MARKETPLACE SECTION -->
     <section class="py-16 bg-beige/50 border-y border-gray-100">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-ink">Beli Lebih Mudah. Nikmati Promo Gratis Ongkir.</h2>
-            <p class="text-ink-light mb-8">Temukan koleksi lengkap kami dan nikmati berbagai penawaran menarik langsung dari toko resmi kami di marketplace favorit Anda.</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <h2 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-ink reveal">Beli Lebih Mudah. Nikmati Promo Gratis Ongkir.</h2>
+            <p class="text-ink-light mb-8 reveal delay-100">Temukan koleksi lengkap kami dan nikmati berbagai penawaran menarik langsung dari toko resmi kami di marketplace favorit Anda.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 reveal delay-200">
                 <a href="#" class="w-full sm:w-auto bg-white border border-gray-200 px-8 py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-md transition group">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee Logo" class="h-6 grayscale group-hover:grayscale-0 transition">
                     <span class="font-medium text-ink">Belanja di Shopee</span>
@@ -371,13 +387,13 @@
     <!-- 8. FAQ SECTION -->
     <section id="faq" class="py-20 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12 reveal">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-ink">Pertanyaan yang Sering Diajukan</h2>
             </div>
 
             <div class="space-y-4">
                 <!-- FAQ 1 -->
-                <div class="group bg-beige rounded-2xl faq-item">
+                <div class="group bg-beige rounded-2xl faq-item reveal">
                     <button class="w-full flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-ink text-left focus:outline-none faq-button">
                         <h3 class="font-bold text-lg">Berapa minimum order (MOQ) untuk pembuatan tas custom?</h3>
                         <span class="relative size-5 shrink-0">
@@ -394,7 +410,7 @@
                     </div>
                 </div>
                 <!-- FAQ 2 -->
-                <div class="group bg-beige rounded-2xl faq-item">
+                <div class="group bg-beige rounded-2xl faq-item reveal delay-100">
                     <button class="w-full flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-ink text-left focus:outline-none faq-button">
                         <h3 class="font-bold text-lg">Berapa lama estimasi waktu produksinya?</h3>
                         <span class="relative size-5 shrink-0">
@@ -411,7 +427,7 @@
                     </div>
                 </div>
                 <!-- FAQ 3 -->
-                <div class="group bg-beige rounded-2xl faq-item">
+                <div class="group bg-beige rounded-2xl faq-item reveal delay-200">
                     <button class="w-full flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-ink text-left focus:outline-none faq-button">
                         <h3 class="font-bold text-lg">Apakah saya bisa membawa desain sendiri?</h3>
                         <span class="relative size-5 shrink-0">
@@ -428,7 +444,7 @@
                     </div>
                 </div>
                 <!-- FAQ 4 -->
-                <div class="group bg-beige rounded-2xl faq-item">
+                <div class="group bg-beige rounded-2xl faq-item reveal delay-300">
                     <button class="w-full flex cursor-pointer items-center justify-between gap-1.5 p-6 font-medium text-ink text-left focus:outline-none faq-button">
                         <h3 class="font-bold text-lg">Material apa saja yang bisa digunakan?</h3>
                         <span class="relative size-5 shrink-0">
@@ -448,13 +464,63 @@
         </div>
     </section>
 
-    <!-- 9. FINAL CTA SECTION -->
-    <section id="kontak" class="py-24 bg-teal text-white relative overflow-hidden">
+    <!-- 9. CONTACT & LOCATION SECTION -->
+    <section id="kontak" class="py-20 bg-beige/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="text-teal font-semibold tracking-wider uppercase text-sm">Kunjungi Kami</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2 mb-4 text-ink">Atau bisa langsung datang ke...</h2>
+                <p class="text-ink-light max-w-2xl mx-auto">Kami selalu terbuka untuk mendiskusikan kebutuhan tas Anda secara langsung di workshop kami.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Info Text -->
+                <div class="space-y-8 reveal">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-12 h-12 bg-teal/10 text-teal rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="ph-fill ph-map-pin text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-ink mb-2">Alamat Workshop</h3>
+                            <p class="text-ink-light leading-relaxed">Jl. Leuwi Sari X No.1, Kb. Lega, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40235</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start">
+                        <div class="w-12 h-12 bg-teal/10 text-teal rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="ph-fill ph-clock text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-ink mb-2">Jam Operasional</h3>
+                            <p class="text-ink-light leading-relaxed">Buka · Tutup pukul 22.00</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-start">
+                        <div class="w-12 h-12 bg-teal/10 text-teal rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="ph-fill ph-phone text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-ink mb-2">Telepon / WhatsApp</h3>
+                            <p class="text-ink-light leading-relaxed font-medium">0813-9421-2099</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div class="w-full h-80 lg:h-[400px] rounded-2xl overflow-hidden shadow-lg border border-gray-100 reveal delay-200">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5725.05583147041!2d107.59856426205701!3d-6.9434002689850916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e954ef76d419%3A0x5d265d5f722828c9!2sDEMSARE%20SINAR%20JAYA!5e1!3m2!1sid!2sid!4v1775802262303!5m2!1sid!2sid" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FINAL CTA SECTION -->
+    <section id="cta" class="py-24 bg-teal text-white relative overflow-hidden">
         <!-- Decorative abstract circle -->
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-teal-light rounded-full mix-blend-multiply filter blur-2xl opacity-50"></div>
         <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-teal-dark rounded-full mix-blend-multiply filter blur-2xl opacity-50"></div>
         
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 reveal">
             <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Siap Melangkah dengan Gaya Baru atau Memulai Proyek Anda?</h2>
             <p class="text-white/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
                 Jangan tunda lagi. Pilih koleksi tas favorit yang mewakili karakter Anda, atau diskusikan ide tas custom Anda bersama ahlinya hari ini.
@@ -488,6 +554,25 @@
     <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Animation Observer
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Menghapus komentar baris di bawah ini jika ingin animasi hanya diputar 1x
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.15, // Trigger saat elemen terlihat 15%
+                rootMargin: "0px 0px -50px 0px" // Sedikit menunda trigger hingga lebih masuk ke viewport
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
             // FAQ Interactive Slide
             const faqButtons = document.querySelectorAll('.faq-button');
             faqButtons.forEach(button => {
