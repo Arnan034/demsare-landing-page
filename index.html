@@ -58,8 +58,12 @@
          SEO: FAVICON
          GANTI path sesuai aset Anda
     ============================================================ -->
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./assets/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Demsare" />
+    <link rel="manifest" href="./assets/icon/site.webmanifest" />
 
     <!-- ============================================================
          SEO: SCHEMA MARKUP — LocalBusiness + WebSite
@@ -275,7 +279,7 @@
                     <a href="/" aria-label="Demsare — Halaman Utama" class="flex items-center gap-3">
 
                         <!-- Logo Image -->
-                        <img src="assets/logo.svg" alt="Logo Demsare" class="w-10 h-10 object-contain">
+                        <img src="assets/logo.svg" alt="Logo Demsare" class="w-20 h-20 object-contain">
 
                         <!-- Text -->
                         <div class="flex flex-col leading-none">
@@ -608,7 +612,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative reveal">
-                    <img src="https://images.unsplash.com/photo-1556015048-4bba3883b27b?auto=format&fit=crop&q=80&w=800" 
+                    <img src="./assets/custom-services-ilustration.png" 
                          alt="Proses desain dan pembuatan tas custom di workshop Demsare Bandung" 
                          class="rounded-2xl shadow-2xl object-cover h-[500px] w-full"
                          width="800" height="500" loading="lazy" decoding="async">
@@ -661,103 +665,151 @@
     </section>
 
     <!-- ============================================================
-         SECTION 5: PORTFOLIO
-         SEO: Alt text setiap gambar portofolio deskriptif & spesifik
-         (Google index alt text sebagai konten utama pada gambar)
+        SECTION 5: PORTFOLIO
+        Auto-slide: 10 detik | Infinite loop | 3 visible / 4 total
+        Responsive: 1 mobile, 2 tablet, 3 desktop
     ============================================================ -->
     <section id="portofolio" class="py-20 bg-beige" aria-labelledby="portofolio-heading">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
             <div class="text-center mb-16 reveal">
-                <h2 id="portofolio-heading" class="font-serif text-3xl md:text-4xl font-bold mb-4 text-ink">Portofolio Tas Custom Demsare</h2>
-                <p class="text-ink-light max-w-2xl mx-auto">Bukti nyata dari dedikasi kami. Jelajahi berbagai proyek <strong>tas custom korporat</strong>, <strong>tas seminar instansi</strong>, dan <strong>tas komunitas</strong> yang telah kami wujudkan.</p>
+                <h2 id="portofolio-heading" class="font-serif text-3xl md:text-4xl font-bold mb-4 text-ink">
+                    Portofolio Tas Custom Demsare
+                </h2>
+                <p class="text-ink-light max-w-2xl mx-auto">
+                    Bukti nyata dari dedikasi kami. Jelajahi berbagai proyek
+                    <strong>tas custom korporat</strong>, <strong>tas seminar instansi</strong>,
+                    dan <strong>tas komunitas</strong> yang telah kami wujudkan.
+                </p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Item 1 -->
-                <article class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 reveal">
-                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600" 
-                         alt="Seminar Kit korporat — ransel laptop kanvas anti-air dengan bordir logo untuk Bank Nasional, produksi Demsare Bandung" 
-                         class="w-full h-64 object-cover"
-                         width="600" height="256" loading="lazy" decoding="async">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Corporate Client</span>
-                        <h3 class="font-serif font-bold text-xl mb-2">Seminar Kit Exclusive</h3>
-                        <p class="text-ink-light text-sm">Ransel laptop minimalis berbahan kanvas anti-air dengan bordir logo presisi untuk Bank Nasional.</p>
+    
+            <div class="reveal">
+                <!-- Viewport -->
+                <div id="porto-viewport" class="overflow-hidden">
+                    <div id="porto-track" class="flex gap-6 will-change-transform">
+    
+                        <!-- Item 1 -->
+                        <article class="porto-card flex-shrink-0 group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600"
+                                alt="Seminar Kit korporat — ransel laptop kanvas anti-air dengan bordir logo untuk Bank Nasional, produksi Demsare Bandung"
+                                class="w-full h-64 object-cover" width="600" height="256" loading="lazy" decoding="async">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Corporate Client</span>
+                                <h3 class="font-serif font-bold text-xl mb-2">Seminar Kit Exclusive</h3>
+                                <p class="text-ink-light text-sm">Ransel laptop minimalis berbahan kanvas anti-air dengan bordir logo presisi untuk Bank Nasional.</p>
+                            </div>
+                        </article>
+    
+                        <!-- Item 2 -->
+                        <article class="porto-card flex-shrink-0 group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600"
+                                alt="Pouch eksklusif custom untuk merchandise event instansi pemerintah — produksi Demsare Bandung"
+                                class="w-full h-64 object-cover" width="600" height="256" loading="lazy" decoding="async">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Instansi &amp; Lembaga</span>
+                                <h3 class="font-serif font-bold text-xl mb-2">Beauty Community Pouch</h3>
+                                <p class="text-ink-light text-sm">Pouch serbaguna berdesain chic untuk hadiah eksklusif perayaan acara instansi.</p>
+                            </div>
+                        </article>
+    
+                        <!-- Item 3 -->
+                        <article class="porto-card flex-shrink-0 group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?auto=format&fit=crop&q=80&w=600"
+                                alt="Sling bag pria desain urban untuk seragam komunitas otomotif — custom produksi Demsare Bandung"
+                                class="w-full h-64 object-cover" width="600" height="256" loading="lazy" decoding="async">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Komunitas &amp; Organisasi</span>
+                                <h3 class="font-serif font-bold text-xl mb-2">Urban Street Sling Bag</h3>
+                                <p class="text-ink-light text-sm">Sling bag pria desain urban, diproduksi khusus untuk kebutuhan seragam komunitas otomotif.</p>
+                            </div>
+                        </article>
+    
+                        <!-- Item 4 -->
+                        <article class="porto-card flex-shrink-0 group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=600"
+                                alt="Tote bag custom bordir logo untuk souvenir wisuda universitas — produksi Demsare Bandung"
+                                class="w-full h-64 object-cover" width="600" height="256" loading="lazy" decoding="async">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Pendidikan &amp; Kampus</span>
+                                <h3 class="font-serif font-bold text-xl mb-2">Tote Bag Wisuda Eksklusif</h3>
+                                <p class="text-ink-light text-sm">Tote bag custom dengan bordir logo kampus, diproduksi sebagai souvenir wisuda eksklusif.</p>
+                            </div>
+                        </article>
+    
                     </div>
-                </article>
-                <!-- Item 2 -->
-                <article class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 reveal delay-100">
-                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600" 
-                         alt="Pouch eksklusif custom untuk merchandise event instansi pemerintah — produksi Demsare Bandung" 
-                         class="w-full h-64 object-cover"
-                         width="600" height="256" loading="lazy" decoding="async">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Instansi & Lembaga</span>
-                        <h3 class="font-serif font-bold text-xl mb-2">Beauty Community Pouch</h3>
-                        <p class="text-ink-light text-sm">Pouch serbaguna berdesain chic untuk hadiah eksklusif perayaan acara instansi.</p>
-                    </div>
-                </article>
-                <!-- Item 3 -->
-                <article class="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 reveal delay-200">
-                    <img src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?auto=format&fit=crop&q=80&w=600" 
-                         alt="Sling bag pria desain urban untuk seragam komunitas otomotif — custom produksi Demsare Bandung" 
-                         class="w-full h-64 object-cover"
-                         width="600" height="256" loading="lazy" decoding="async">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-teal-dark uppercase tracking-wider mb-2 block">Komunitas & Organisasi</span>
-                        <h3 class="font-serif font-bold text-xl mb-2">Urban Street Sling Bag</h3>
-                        <p class="text-ink-light text-sm">Sling bag pria desain urban, diproduksi khusus untuk kebutuhan seragam komunitas otomotif.</p>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
-
+    
+    
     <!-- ============================================================
-         SECTION 6: TESTIMONIAL
-         SEO: Konten review asli = social proof & fresh content signal
+        SECTION 6: TESTIMONIAL
+        Auto-slide: 5 detik | Infinite loop | 3 visible / 4 total
+        Bintang dihapus | Responsive
     ============================================================ -->
     <section class="py-20 bg-white" aria-labelledby="testimoni-heading">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 id="testimoni-heading" class="font-serif text-3xl md:text-4xl font-bold mb-12 text-center text-ink reveal">Apa Kata Klien Kami</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testi 1 -->
-                <article class="bg-beige p-8 rounded-[2rem] rounded-tr-none relative reveal" aria-label="Testimoni dari Budianto H.">
-                    <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6" aria-hidden="true"></i>
-                    <!-- <div class="flex gap-1 text-yellow-500 mb-4 text-sm" role="img" aria-label="Rating 5 bintang">
-                        <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i>
-                    </div> -->
-                    <blockquote class="text-ink font-medium leading-relaxed mb-6">"Kualitas tas custom untuk event kantor kami sangat memuaskan. Jahitannya rapi, materialnya tebal, dan yang terpenting: selesai lebih cepat dari target waktu!"</blockquote>
-                    <footer>
-                        <p class="font-bold text-ink">Budianto H.</p>
-                        <p class="text-sm text-teal-dark">HR Manager (Pesanan Custom)</p>
-                    </footer>
-                </article>
-                <!-- Testi 2 -->
-                <article class="bg-beige p-8 rounded-[2rem] rounded-tl-none relative reveal delay-100" aria-label="Testimoni dari Sarah L.">
-                    <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6" aria-hidden="true"></i>
-                    <div class="flex gap-1 text-yellow-500 mb-4 text-sm" role="img" aria-label="Rating 5 bintang">
-                        <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i>
+    
+            <h2 id="testimoni-heading" class="font-serif text-3xl md:text-4xl font-bold mb-12 text-center text-ink reveal">
+                Apa Kata Klien Kami
+            </h2>
+    
+            <div class="reveal">
+                <!-- Viewport -->
+                <div id="testi-viewport" class="overflow-hidden">
+                    <div id="testi-track" class="flex gap-6 will-change-transform">
+    
+                        <!-- Testi 1 -->
+                        <article class="testi-card flex-shrink-0 bg-beige p-8 rounded-[2rem] rounded-tr-none relative" aria-label="Testimoni dari Budianto H.">
+                            <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6" aria-hidden="true"></i>
+                            <blockquote class="text-ink font-medium leading-relaxed mb-6">
+                                "Kualitas tas custom untuk event kantor kami sangat memuaskan. Jahitannya rapi, materialnya tebal, dan yang terpenting: selesai lebih cepat dari target waktu!"
+                            </blockquote>
+                            <footer>
+                                <p class="font-bold text-ink">Budianto H.</p>
+                                <p class="text-sm text-teal-dark">HR Manager (Pesanan Custom)</p>
+                            </footer>
+                        </article>
+    
+                        <!-- Testi 2 -->
+                        <article class="testi-card flex-shrink-0 bg-beige p-8 rounded-[2rem] rounded-tl-none relative" aria-label="Testimoni dari Sarah L.">
+                            <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6" aria-hidden="true"></i>
+                            <blockquote class="text-ink font-medium leading-relaxed mb-6">
+                                "Beli tas kerja dari koleksi ready-stock mereka. Desainnya beneran elegan dan praktis buat bawa laptop. Pelayanan admin juga ramah banget."
+                            </blockquote>
+                            <footer>
+                                <p class="font-bold text-ink">Sarah L.</p>
+                                <p class="text-sm text-teal-dark">Karyawan Swasta (Retail)</p>
+                            </footer>
+                        </article>
+    
+                        <!-- Testi 3 -->
+                        <article class="testi-card flex-shrink-0 bg-beige p-8 rounded-[2rem] rounded-tr-none relative" aria-label="Testimoni dari Andi W.">
+                            <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6" aria-hidden="true"></i>
+                            <blockquote class="text-ink font-medium leading-relaxed mb-6">
+                                "Susah cari vendor yang ngerti detail spesifikasi tas lapangan. Untung ketemu Demsare. Komunikasi lancar dan hasil sampling sangat kokoh."
+                            </blockquote>
+                            <footer>
+                                <p class="font-bold text-ink">Andi W.</p>
+                                <p class="text-sm text-teal-dark">Koordinator Pengadaan (Pesanan Custom)</p>
+                            </footer>
+                        </article>
+    
+                        <!-- Testi 4 -->
+                        <article class="testi-card flex-shrink-0 bg-beige p-8 rounded-[2rem] rounded-tl-none relative" aria-label="Testimoni dari Rina M.">
+                            <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6" aria-hidden="true"></i>
+                            <blockquote class="text-ink font-medium leading-relaxed mb-6">
+                                "Sudah dua kali order tas souvenir untuk acara ulang tahun perusahaan. Hasilnya selalu memuaskan dan pengirimannya tepat waktu. Pasti order lagi!"
+                            </blockquote>
+                            <footer>
+                                <p class="font-bold text-ink">Rina M.</p>
+                                <p class="text-sm text-teal-dark">Event Organizer (Pesanan Custom)</p>
+                            </footer>
+                        </article>
+    
                     </div>
-                    <blockquote class="text-ink font-medium leading-relaxed mb-6">"Beli tas kerja dari koleksi ready-stock mereka. Desainnya beneran elegan dan praktis buat bawa laptop. Pelayanan admin juga ramah banget."</blockquote>
-                    <footer>
-                        <p class="font-bold text-ink">Sarah L.</p>
-                        <p class="text-sm text-teal-dark">Karyawan Swasta (Retail)</p>
-                    </footer>
-                </article>
-                <!-- Testi 3 -->
-                <article class="bg-beige p-8 rounded-[2rem] rounded-tr-none relative reveal delay-200" aria-label="Testimoni dari Andi W.">
-                    <i class="ph-fill ph-quotes text-4xl text-teal/30 absolute top-6 right-6" aria-hidden="true"></i>
-                    <div class="flex gap-1 text-yellow-500 mb-4 text-sm" role="img" aria-label="Rating 5 bintang">
-                        <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i>
-                    </div>
-                    <blockquote class="text-ink font-medium leading-relaxed mb-6">"Susah cari vendor yang ngerti detail spesifikasi tas lapangan. Untung ketemu Demsare. Komunikasi lancar dan hasil sampling sangat kokoh."</blockquote>
-                    <footer>
-                        <p class="font-bold text-ink">Andi W.</p>
-                        <p class="text-sm text-teal-dark">Koordinator Pengadaan (Pesanan Custom)</p>
-                    </footer>
-                </article>
+                </div>
             </div>
         </div>
     </section>
@@ -1086,7 +1138,8 @@
                     if (mobileMenu.classList.contains('opacity-100')) toggleMobileMenu();
                 });
             });
-
+            
+            // carousel section koleksi
             const GAP = 20; // px — harus sama dengan gap-5 Tailwind (20px)
         
             /* ── Elements ── */
@@ -1250,6 +1303,81 @@
             }
 
             init();
+
+            // ── Auto-slide: Portfolio (10s) & Testimonial (5s) ──
+            // Teknik: clone-jump infinite loop, tanpa button/dots
+            function autoSlider(trackId, viewportId, cardClass, interval, gapPx) {
+                const track    = document.getElementById(trackId);
+                const viewport = document.getElementById(viewportId);
+                if (!track || !viewport) return;
+
+                // Clone semua card asli ke akhir track (untuk infinite loop)
+                const origCards = Array.from(track.querySelectorAll('.' + cardClass));
+                const TOTAL = origCards.length;
+                origCards.forEach(card => {
+                    const clone = card.cloneNode(true);
+                    clone.setAttribute('aria-hidden', 'true');
+                    track.appendChild(clone);
+                });
+
+                let idx = 0;
+
+                function visibleCount() {
+                    const w = window.innerWidth;
+                    if (w >= 1024) return 3;
+                    if (w >= 640)  return 2;
+                    return 1;
+                }
+
+                function cardWidth() {
+                    const vis = visibleCount();
+                    return (viewport.offsetWidth - gapPx * (vis - 1)) / vis;
+                }
+
+                function applyWidths() {
+                    const w = cardWidth();
+                    track.querySelectorAll('.' + cardClass).forEach(c => c.style.width = w + 'px');
+                }
+
+                function slideTo(i, animate) {
+                    const offset = i * (cardWidth() + gapPx);
+                    track.style.transition = animate ? 'transform 0.8s cubic-bezier(0.5,0,0,1)' : 'none';
+                    track.style.transform  = `translateX(-${offset}px)`;
+                }
+
+                // Setelah animasi selesai: kalau sudah masuk clone set, jump balik diam-diam
+                track.addEventListener('transitionend', () => {
+                    if (idx >= TOTAL) {
+                        idx = idx - TOTAL;
+                        slideTo(idx, false);
+                    }
+                });
+
+                function next() {
+                    idx++;
+                    slideTo(idx, true);
+                }
+
+                // Auto-slide timer
+                const timer = setInterval(next, interval);
+
+                // Resize: recalculate lebar card tanpa animasi
+                let resizeTimer;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => {
+                        applyWidths();
+                        slideTo(idx, false);
+                    }, 150);
+                });
+
+                // Init
+                applyWidths();
+                slideTo(0, false);
+            }
+
+            autoSlider('porto-track', 'porto-viewport', 'porto-card', 10000, 24);
+            autoSlider('testi-track', 'testi-viewport', 'testi-card',  5000, 24);
         });
     </script>
 </body>
